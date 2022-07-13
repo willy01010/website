@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>My Awesome Site</title>
+  <title>家屬端</title>
 </head>
+
 <body>
-  <h1>Welcome to My Site</h1>
+  <CENTER><b>
+      <h1>Welcome</h1>
+    </b></CENTER>
+
   <h3>HaHaHa!!</h3>
+
+  <center><button onclick="ShowMeDate()" style="width:120px;height:40px;font-size:20px;">date</button></center>
+  <center><button onclick="ShowMeDate()">date2</button></center>
+  <center><button onclick="ShowMeDate()">date3</button></center>
+  
+
+  <input type="button" value="hello" onclick="hello()">
 </body>
+
+
+
 </html>
+
+
+<script language="javascript">
+  function ShowMeDate() {
+  　var Today=new Date();
+  　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+  }
+
+  function hello(){
+    alert("hello");
+  }
+
+</script>
