@@ -10,8 +10,9 @@
       <h1>Welcome</h1>
     </b></CENTER>
 
-  <h3>HaHaHa!!</h3>
+  <p>HaHaHa!!</p>
 
+  <center><button img src="/img/paint.png"></button></center>
   <center><button onclick="ShowMeDate()" style="width:120px;height:40px;font-size:20px;">date</button></center>
   <center><button onclick="ShowMeDate()">date2</button></center>
   <center><button onclick="ShowMeDate()">date3</button></center>
@@ -25,7 +26,7 @@
 </html>
 
 
-<script language="javascript">
+<script>
   function ShowMeDate() {
   　var Today=new Date();
   　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
@@ -35,4 +36,17 @@
     alert("hello");
   }
 
+
+
 </script>
+
+
+<!--
+  <script type="text/javascript">
+  function ShowStr(x){
+  　var Str=document.getElementById(x).value;
+  　alert(Str);
+  }
+  </script>
+  請隨意輸入幾個文字：<input type="text" id="Str" onchange="ShowStr(this.id)">
+-->
