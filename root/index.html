@@ -10,35 +10,52 @@
       <h1>Welcome</h1>
     </b></CENTER>
 
-  <p>HaHaHa!!</p>
-
-  <center><button><img src="/img/paint.png"></button></center>
-  <center><button onclick="ShowMeDate()" style="width:120px;height:40px;font-size:20px;">date</button></center>
-  <center><button onclick="ShowMeDate()">date2</button></center>
-  <center><button onclick="ShowMeDate()">date3</button></center>
   
 
+  <center>
+    <button>date1</button>
+    <button onclick="ShowMeDate()" style="width:120px;height:40px;font-size:20px;">date</button>
+    <button onclick="ShowMeDate()">date2</button>
+    <button onclick="ShowMeDate()">date3</button>
+  </center>
+
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+
+  
   <input type="button" value="hello" onclick="hello()">
+  ------------------------------------------------------------------------------------------
+<center>
+  <button id="battery"><img src="img/icon/BatteryError.png" alt="" style="width:60px;height:60px;font-size:40px;">電池</button>
+</center>
+
+
+<center>
+  <button>訊息</button>
+  <button>控制</button>
+  <button>地圖</button>
+  <br><button>首頁</button><br>
+  <button>緊急聯絡</button>
+  <button>代辦事項</button>
+</center>
+<!--排版正方形格子-->
+
+
 </body>
 
 
 
 </html>
 
-
-<script>
-  function ShowMeDate() {
-  　var Today=new Date();
-  　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
-  }
-
-  function hello(){
-    alert("hello");
-  }
-
-
-
-</script>
+<script src="firebase/firebase.js"></script>
+<script src="res/showdate.js"></script>
+<script src="res/fence.js"></script>
+<script src="data/test.js"></script>
+<script src="res/fencedetect.js"></script>
 
 
 <!--

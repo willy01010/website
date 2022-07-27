@@ -17,10 +17,12 @@ function httpGET(url) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", url, false ); // false for synchronous request
         xmlHttp.send( null );
-        
+
         var inS = xmlHttp.responseText;
+        
         if (inS == "null")
             return "";
+            
         inS = inS.substring(1, inS.length-1);
         return inS;
         time++;
