@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>家屬端</title>
+</head>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXNKousfBaA-nWEmjJ-HdFXn1TEj5HrAo&libraries=geometry,places&callback=initMap">
+</script>
+
+<body>
+
+<table>
+  <tr>
+    <center><input id="searchInput" class="controls" type="text" placeholder="輸入要尋找的地點" style="width: 100%;"></center>
+  </tr>
+  <tr>
+    <td>經度：<input id="newfenceLongitude" type="text" style="float:right"></td>
+  </tr>
+  <tr>
+    <td>緯度：<input id="newfenceLatitude" type="text" style="float:right"></td>
+  </tr>
+  <tr>
+    <td><button onclick='upcar();'>upload car location</button></td>
+  </tr>
+</table>
+
+  <div style="height: 600px;">
+    <div id="map" style="height: 600px; width: 100%; z-index: 0;">
+      <script src="res/gmaps.js" async defer></script>
+
+    </div>
+
+
+  </div>
+
+
+</body>
+
+
+
+</html>
+
+<script src="firebase/firebase.js"></script>
+
+
+<!--
+  <script type="text/javascript">
+  function ShowStr(x){
+  　var Str=document.getElementById(x).value;
+  　alert(Str);
+  }
+  </script>
+  請隨意輸入幾個文字：<input type="text" id="Str" onchange="ShowStr(this.id)">
+-->

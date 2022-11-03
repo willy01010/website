@@ -5,9 +5,12 @@ let url_key1 = ".json?auth=sdfsdfdknnMe2xsdfOCSXHZsLSFdqsdfshyXew43";
 let url_key2 = ".json?auth=M3GknnMe2xY1LWQ01OCSXHZsLSFdq4f7phEyXKOP";
 let url_key3 = ".json?auth=yTkFHPO2ThtIrT6UtwvR8vavup55NahV4294oEnj";
 
-function firebaseGET(dic) {
+function firebaseGET(dic , type) {
     var url= url_com + dic + url_key3;
-    return httpGET(url);
+    if(type == "string")
+        return httpGET(url);
+    else if(type == "integer")
+        return httpGETinteger(url);
 }
 
 function httpGET(url) {
@@ -22,9 +25,11 @@ function httpGET(url) {
         
         if (inS == "null")
             return "";
+        
             
         inS = inS.substring(1, inS.length-1);
         return inS;
+        
         time++;
     }while(xmlHttp.status != 200 && time <= 5)
     
@@ -33,6 +38,34 @@ function httpGET(url) {
     }
     return "";
 }
+
+
+function httpGETinteger(url) {
+    var time = 0;
+    
+    do{
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", url, false ); // false for synchronous request
+        xmlHttp.send( null );
+
+        var inS = xmlHttp.responseText;
+        
+        if (inS == "null")
+            return "";
+        
+            
+        
+        return inS;
+        
+        time++;
+    }while(xmlHttp.status != 200 && time <= 5)
+    
+    if (time > 4){
+        window.alert("Pls Contact engineer with \nerr code : GET - " + response.status);
+    }
+    return "";
+}
+
 
   
 function firebasePUT(dic , text) {
