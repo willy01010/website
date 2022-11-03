@@ -21,8 +21,15 @@ function getcarLocation() {
 function upcar(){
     var lng = document.getElementById('newfenceLongitude').value;
     var lat = document.getElementById('newfenceLatitude').value;
-    firebasePUT("Map/CarLocation/Latitude", lat);
-    firebasePUT("Map/CarLocation/Longitude", lng);
+    try{
+      firebasePUT("Map/CarLocation/Latitude", lat);
+      firebasePUT("Map/CarLocation/Longitude", lng);
+      document.getElementById('log').innerHTML = "OK";
+    }catch(err){
+      document.getElementById('log').innerHTML = err;
+        console.log(err);
+    }
+    
 }
 
 function initMap() {
